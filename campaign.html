@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Village Nutrition Campaign - Field visits and community outreach in Nagullanka">
+  <title>Campaign — Village Nutrition Program</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;700&family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="top-nav">
+    <div class="nav-wrap">
+      <a href="index.html" class="brand">
+        <img src="images/logo.svg" alt="Logo" class="logo-img">
+        <div class="brand-text">
+          <div class="brand-title">Eat Right, Live Bright</div>
+          <div class="brand-sub">Campaign</div>
+        </div>
+      </a>
+
+      <button class="nav-toggle" aria-label="Open menu" id="navToggle">☰</button>
+
+      <nav class="nav-actions" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="foods.html">Healthy Foods</a>
+        <a href="issues.html">Health Issues</a>
+        <a href="campaign.html">Campaign</a>
+        <a href="diet-checker.html">Diet Checker</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="campaign-container">
+      <div class="campaign-header">
+        <h1>🌾 Village Nutrition Campaign</h1>
+        <p>Real stories from the field — Project team members conducting nutrition awareness visits in Nagullanka, Andhra Pradesh</p>
+      </div>
+
+      <div id="campaignGallery" class="campaign-gallery" aria-live="polite">
+        <!-- Images are loaded dynamically by JavaScript -->
+      </div>
+      <div id="noImagesMessage" style="display:none;margin-top:18px;text-align:center;color:var(--muted)"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer footbar">
+    <div class="footer-inner">
+      <p class="footer-left">© 2025 Eat Right Live Bright Project</p>
+      <p class="footer-right">Community Nutrition Education Program</p>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      // captions for known images
+      const captions = {
+        1: 'Nagullanka, Andhra Pradesh, India\nLat 16.532934° Long 81.876896°',
+        2: 'Nagullanka, Andhra Pradesh, India\nLat 16.535215° Long 81.871399°\n16/05/2025 02:23 PM',
+        3: 'Nagullanka, Andhra Pradesh, India\nLat 16.531864° Long 81.877579°\n24/05/2025 12:11 PM',
+        4: 'Nagullanka, Andhra Pradesh, India\nLat 16.535215° Long 81.871399°\n27/05/2025 02:20 PM',
+        5: 'Nagullanka, Andhra Pradesh, India\nLat 16.535215° Long 81.871399°\n21/09/2025 01:08 PM'
+      };
+
+      const gallery = document.getElementById('campaignGallery');
+      const msg = document.getElementById('noImagesMessage');
+      let found = 0;
+      const maxTry = 10;
+
+      const extraFiles = [
+        'WhatsApp Image 2025-12-04 at 21.57.45_527eea36.jpg',
+        'WhatsApp Image 2025-12-03 at 12.39.18_77876ef0.jpg',
+        'WhatsApp Image 2025-12-03 at 12.39.19_02ae5946.jpg',
+        'WhatsApp Image 2025-12-04 at 21.48.54_046d98b4.jpg',
+        'WhatsApp Image 2025-12-04 at 21.48.54_43fe68d5.jpg',
+        'image.png',
+        'WhatsApp Image 2025-12-07 at 22.49.48_d87ff692.jpg',
+        'WhatsApp Image 2025-12-07 at 22.50.31_26b41e3c.jpg',
+        'WhatsApp Image 2025-12-07 at 22.51.19_6cc7d02b.jpg',
+        'WhatsApp Image 2025-12-07 at 22.52.11_4d9c4616.jpg',
+        'campaign6.jpg'
+      ];
+
+      function makeCard(i, src){
+        const card = document.createElement('div');
+        card.className = 'campaign-card';
+        const img = document.createElement('img');
+        img.loading = 'lazy';
+        img.alt = 'Visit ' + i;
+        img.src = src;
+        const cap = document.createElement('div');
+        cap.className = 'campaign-caption';
+        cap.innerText = captions[i] || 'Nagullanka, Andhra Pradesh, India';
+        card.appendChild(img);
+        card.appendChild(cap);
+        return card;
+      }
+
+      extraFiles.forEach(function(name, idx){
+        const url = 'images/' + name;
+        const testImg = new Image();
+        testImg.onload = function(){
+          found++;
+          const card = makeCard('orig-'+(idx+1), url);
+          gallery.appendChild(card);
+        };
+        testImg.onerror = function(){ };
+        testImg.src = url;
+      });
+
+      const exts = ['.jpg', '.png', '.svg'];
+      for(let i=1;i<=maxTry;i++){
+        (function(i){
+          let tried = 0;
+          function tryNext(){
+            if(tried >= exts.length) return;
+            const ext = exts[tried++];
+            const url = 'images/campaign'+i+ext;
+            const testImg = new Image();
+            testImg.onload = function(){
+              found++;
+              const card = makeCard(i, url);
+              gallery.appendChild(card);
+            };
+            testImg.onerror = function(){
+              tryNext();
+            };
+            testImg.src = url;
+          }
+          tryNext();
+        })(i);
+      }
+
+      setTimeout(function(){
+        if(found === 0){
+          msg.style.display = 'block';
+          msg.innerText = 'No campaign images found in the `images/` folder.\nPlease add files named campaign1.jpg, campaign2.jpg ... campaignN.jpg and reload this page.';
+        }
+      }, 600);
+    })();
+  </script>
+
+</body>
+</html>

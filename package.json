@@ -1,0 +1,24 @@
+{
+  "name": "eat-right-live-bright",
+  "version": "1.0.0",
+  "description": "Community nutrition education website for empowering families with practical, local nutrition guidance",
+  "type": "module",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'Static site - no build step required'",
+    "start": "vercel dev"
+  },
+  "keywords": [
+    "nutrition",
+    "health",
+    "community",
+    "education",
+    "static-site"
+  ],
+  "author": "Eat Right Live Bright Project",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "."
+  }
+}
