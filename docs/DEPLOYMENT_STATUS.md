@@ -4,20 +4,20 @@
 
 The following files are in the project and should be pushed to GitHub:
 
-### HTML Pages
-- ✅ index.html
-- ✅ campaign.html
-- ✅ foods.html
-- ✅ issues.html
-- ✅ diet-checker.html
-- ✅ eat-right-live-bright.html
+### HTML Pages (under `public/`)
+- ✅ public/index.html
+- ✅ public/pages/campaign.html
+- ✅ public/pages/foods.html
+- ✅ public/pages/issues.html
+- ✅ public/pages/diet-checker.html
+- ✅ public/pages/eat-right-live-bright.html
 
-### Assets
-- ✅ styles.css
-- ✅ app.js
-- ✅ images/ (folder with all images)
-- ✅ image.png
-- ✅ 500_Person_Gender_Height_Weight_Index.csv
+### Assets (under `public/assets/`)
+- ✅ public/assets/css/styles.css
+- ✅ public/assets/js/app.js
+- ✅ public/assets/images/ (folder with all images)
+- ✅ public/assets/images/image.png
+- ✅ public/assets/data/500_Person_Gender_Height_Weight_Index.csv
 
 ### Configuration Files
 - ✅ vercel.json (Vercel deployment config)
@@ -26,8 +26,8 @@ The following files are in the project and should be pushed to GitHub:
 - ✅ .gitignore (Git ignore file)
 - ✅ README.md
 
-### Archive
-- ✅ archive/eat-right-live-bright.html
+### Archive (under `docs/`)
+- ✅ docs/archive/eat-right-live-bright.html
 
 ## GitHub Repository
 **URL:** https://github.com/Hari-1718/Eat-Right-Live-Bright.git

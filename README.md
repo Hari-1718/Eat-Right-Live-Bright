@@ -1,10 +1,11 @@
 # Eat Right, Live Bright
 
-Community nutrition education program website for Nagullanka, Andhra Pradesh.
+Community nutrition education website (static HTML/CSS/JS) organized under `public/` for deployment, with docs and scripts in dedicated folders.
 
-- Static HTML/CSS/JS
-- Theme toggle + accent color picker
-- Mobile-friendly bottom-sheet navigation
-- Pages: Home, Healthy Foods, Health Issues, Campaign, Diet Checker
+- Site root: `public/`
+  - `index.html`, `pages/`, `assets/` (css/js/images/data)
+- Docs: `docs/` (README, deployment notes, archive)
+- Scripts: `scripts/` (utility .ps1/.bat)
+- Config: `vercel.json` (serves from `public`)
 
-Maintained by Chinimilli Hari Prasad.
+For detailed documentation, see `docs/README.md`.

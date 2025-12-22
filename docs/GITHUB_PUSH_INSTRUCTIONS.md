@@ -3,9 +3,9 @@
 ## ✅ All Files Are Ready
 
 Your project contains all necessary files:
-- All HTML pages (index.html, campaign.html, foods.html, issues.html, diet-checker.html)
-- CSS and JavaScript files (styles.css, app.js)
-- All images in the images/ folder
+- All HTML pages (public/index.html, public/pages/campaign.html, foods.html, issues.html, diet-checker.html)
+- CSS and JavaScript files (public/assets/css/styles.css, public/assets/js/app.js)
+- All images in the public/assets/images/ folder
 - Vercel configuration files (vercel.json, package.json, .vercelignore)
 - Data files (CSV)
 - README.md
@@ -62,25 +62,25 @@ git push -u origin main --force
 After pushing, check:
 - Visit: https://github.com/Hari-1718/Eat-Right-Live-Bright
 - You should see all your files there
-- Check that index.html, styles.css, app.js, and images/ folder are present
+- Check that public/index.html, public/assets/css/styles.css, public/assets/js/app.js, and public/assets/images/ folder are present
 
 ## 📦 Files That Should Be in Repository
 
-- ✅ index.html
-- ✅ campaign.html
-- ✅ foods.html
-- ✅ issues.html
-- ✅ diet-checker.html
-- ✅ styles.css
-- ✅ app.js
+- ✅ public/index.html
+- ✅ public/pages/campaign.html
+- ✅ public/pages/foods.html
+- ✅ public/pages/issues.html
+- ✅ public/pages/diet-checker.html
+- ✅ public/assets/css/styles.css
+- ✅ public/assets/js/app.js
 - ✅ package.json
 - ✅ vercel.json
 - ✅ .vercelignore
 - ✅ .gitignore
 - ✅ README.md
-- ✅ images/ (entire folder)
-- ✅ 500_Person_Gender_Height_Weight_Index.csv
-- ✅ image.png
+- ✅ public/assets/images/ (entire folder)
+- ✅ public/assets/data/500_Person_Gender_Height_Weight_Index.csv
+- ✅ public/assets/images/image.png
 
 ## 🔄 If Push Fails
 
