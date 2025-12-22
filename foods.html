@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Healthy Foods Guide - Nutritious local ingredients for wellness">
+  <title>Healthy Foods — Eat Right, Live Bright</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;700&family=Segoe+UI:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=15">
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+</head>
+
+<body>
+  <!-- HEADER / NAVIGATION -->
+  <header class="top-nav">
+    <div class="nav-wrap">
+      <a href="index.html" class="brand">
+        <img src="images/logo.svg" alt="Logo" class="logo-img">
+        <div class="brand-text">
+          <div class="brand-title">Eat Right, Live Bright</div>
+          <div class="brand-sub">Healthy Foods Guide</div>
+        </div>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+      <nav class="nav-actions">
+        <div class="sheet-handle"></div>
+        <button class="nav-close-btn" aria-label="Close menu">&times;</button>
+        <div class="nav-links-container">
+          <a href="index.html">Home</a>
+          <a href="foods.html" aria-current="page">Healthy Foods</a>
+          <a href="issues.html">Health Issues</a>
+          <a href="campaign.html">Campaign</a>
+          <a href="diet-checker.html">Diet Checker</a>
+        </div>
+      </nav>
+
+      <!-- Theme toggle moved -->
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme"
+        title="Toggle dark/light mode">
+        <span class="theme-icon">
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+          </svg>
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4" />
+            <path d="M12 2v2" />
+            <path d="M12 20v2" />
+            <path d="m4.93 4.93 1.41 1.41" />
+            <path d="m17.66 17.66 1.41 1.41" />
+            <path d="M2 12h2" />
+            <path d="M20 12h2" />
+            <path d="m6.34 17.66-1.41 1.41" />
+            <path d="m19.07 4.93-1.41 1.41" />
+          </svg>
+        </span>
+      </button>
+      <button class="color-toggle" id="colorToggle" type="button" aria-label="Choose accent colors" title="Choose accent colors">
+        <svg class="color-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+          <circle cx="6" cy="6" r="3"/>
+          <circle cx="18" cy="6" r="3"/>
+          <circle cx="6" cy="18" r="3"/>
+          <circle cx="18" cy="18" r="3"/>
+        </svg>
+      </button>
+      <div class="color-popover" id="colorPopover" role="dialog" aria-label="Accent colors">
+        <div class="color-grid">
+          <button class="color-swatch" data-primary="#10b981" data-secondary="#f59e0b" style="background:#10b981" aria-label="Emerald"></button>
+          <button class="color-swatch" data-primary="#f43f5e" data-secondary="#fb7185" style="background:#f43f5e" aria-label="Rose"></button>
+          <button class="color-swatch" data-primary="#8b5cf6" data-secondary="#a78bfa" style="background:#8b5cf6" aria-label="Violet"></button>
+          <button class="color-swatch" data-primary="#0ea5e9" data-secondary="#22d3ee" style="background:#0ea5e9" aria-label="Sky"></button>
+          <button class="color-swatch" data-primary="#f59e0b" data-secondary="#fbbf24" style="background:#f59e0b" aria-label="Amber"></button>
+          <button class="color-swatch" data-primary="#22c55e" data-secondary="#16a34a" style="background:#22c55e" aria-label="Green"></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1>Healthy Foods — Nutritional Guide</h1>
+        <p style="font-size: 1.05rem; color: var(--gray-medium); margin-bottom: 2rem;">
+          Discover locally-available foods packed with essential nutrients. Each category highlights foods that support
+          specific health benefits with detailed nutritional values.
+        </p>
+
+        <!-- SECTION 1: Iron & Blood Health -->
+        <h2 style="margin-top: 3rem;">🩸 Iron & Blood Health</h2>
+        <div class="cards-grid">
+          <div class="card">
+            <h3>Leafy Greens</h3>
+            <ul class="foods">
+              <li>🌿 Spinach — Iron 2.7 mg/100g, Folate 141 mcg/100g</li>
+              <li>🌿 Amaranth — Iron 8.8 mg/100g, Protein 3.3 g/100g</li>
+              <li>🌿 Fenugreek leaves — Iron 1.3 mg/100g, Fiber 2.4 g/100g</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Root Vegetables</h3>
+            <ul class="foods">
+              <li>🥬 Beetroot — Folate 109 mcg/100g, Betalains (antioxidants)</li>
+              <li>🥬 Sweet potato — Vitamin A 961 mcg/100g, Fiber 3 g/100g</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Grains & Pulses</h3>
+            <ul class="foods">
+              <li>🌾 Ragi — Iron 3.9 mg/100g, Calcium 344 mg/100g</li>
+              <li>🌾 Green gram — Iron 6.7 mg/100g, Protein 24 g/100g</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- SECTION 2: Energy & Protein -->
+        <h2 style="margin-top: 3rem;">⚡ Energy & Protein Power</h2>
+        <div class="cards-grid">
+          <div class="card">
+            <h3>Protein Sources</h3>
+            <ul class="foods">
+              <li>🥚 Eggs — Protein 6 g/egg, Choline 147 mg/egg</li>
+              <li>🥜 Groundnuts — Protein 26 g/100g, Healthy fats 49 g/100g</li>
+              <li>🥛 Milk — Protein 8 g/cup, Calcium 120 mg/cup</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Sprouts & Legumes</h3>
+            <ul class="foods">
+              <li>🌱 Bean sprouts — Protein 14 g/100g, Vitamin C 13 mg/100g</li>
+              <li>🌱 Chickpea sprouts — Protein 19 g/100g, Fiber 6 g/100g</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Fruits for Energy</h3>
+            <ul class="foods">
+              <li>🍌 Banana — Energy 89 kcal/100g, Potassium 358 mg/100g</li>
+              <li>🥜 Dates — Energy 277 kcal/100g, Iron 0.9 mg/100g</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- SECTION 3: Hydration & Electrolytes -->
+        <h2 style="margin-top: 3rem;">💧 Hydration & Electrolytes</h2>
+        <div class="cards-grid">
+          <div class="card">
+            <h3>Natural Hydration</h3>
+            <ul class="foods">
+              <li>🥥 Coconut water — Potassium 250 mg/100ml, Natural electrolytes</li>
+              <li>🍊 Orange — Vitamin C 53 mg/100g, Water 86%</li>
+              <li>🍈 Watermelon — Water 92%, Lycopene (antioxidant)</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Fermented Foods</h3>
+            <ul class="foods">
+              <li>🥛 Buttermilk — Probiotics, Calcium 120 mg/100ml</li>
+              <li>🍶 Curd — Lactobacillus, Calcium 100 mg/100g</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- SECTION 4: Fiber & Digestion -->
+        <h2 style="margin-top: 3rem;">🌾 Fiber & Digestive Health</h2>
+        <div class="cards-grid">
+          <div class="card">
+            <h3>High-Fiber Fruits</h3>
+            <ul class="foods">
+              <li>🍌 Papaya — Fiber 2.2 g/100g, Papain (digestive enzyme)</li>
+              <li>🍐 Guava — Fiber 5.4 g/100g, Vitamin C 228 mg/100g</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Whole Grains</h3>
+            <ul class="foods">
+              <li>🌾 Jowar — Fiber 6 g/100g, Protein 11 g/100g</li>
+              <li>🌾 Ragi — Fiber 3.6 g/100g, Low glycemic index</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Seeds & Nuts</h3>
+            <ul class="foods">
+              <li>🌱 Flax seeds — Fiber 27 g/100g, Omega-3 22 g/100g</li>
+              <li>🌱 Sesame seeds — Fiber 16 g/100g, Calcium 975 mg/100g</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer footbar">
+    <div class="footer-inner">
+      <p class="footer-left">© 2025 Eat Right Live Bright Project</p>
+      <p class="footer-right">Healthy Eating for Healthy Living</p>
+    </div>
+  </footer>
+
+  <script src="app.js?v=4" defer></script>
+</body>
+
+</html>

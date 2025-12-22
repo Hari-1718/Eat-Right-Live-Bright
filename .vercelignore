@@ -1,0 +1,16 @@
+# Git files
+.git
+.gitignore
+GIT_PUSH.bat
+push-to-github.bat
+push.ps1
+
+# Archive folder
+archive/
+
+# Documentation (optional - you can remove this if you want to include README)
+# README.md
+
+# Development files
+*.bat
+*.ps1

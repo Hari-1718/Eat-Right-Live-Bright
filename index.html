@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Eat Right, Live Bright - Community nutrition education program in Nagullanka, Andhra Pradesh">
+  <title>Eat Right, Live Bright — Empowering Families Through Nutrition</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;700&family=Segoe+UI:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=27">
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+</head>
+
+<body>
+  <!-- HEADER / NAVIGATION -->
+  <header class="top-nav">
+    <div class="nav-wrap">
+      <a href="index.html" class="brand">
+        <img src="images/logo.svg" alt="Logo" class="logo-img">
+        <div class="brand-text">
+          <div class="brand-title">Eat Right, Live Bright</div>
+          <div class="brand-sub">Nutrition for Health</div>
+        </div>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+      <nav class="nav-actions">
+        <div class="sheet-handle"></div>
+        <button class="nav-close-btn" aria-label="Close menu">&times;</button>
+        <div class="nav-links-container">
+          <a href="index.html" aria-current="page">Home</a>
+          <a href="foods.html">Healthy Foods</a>
+          <a href="issues.html">Health Issues</a>
+          <a href="campaign.html">Campaign</a>
+          <a href="diet-checker.html">Diet Checker</a>
+
+        </div>
+      </nav>
+
+      <!-- Theme toggle moved to end for desktop alignment -->
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme"
+        title="Toggle dark/light mode">
+        <span class="theme-icon">
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+          </svg>
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4" />
+            <path d="M12 2v2" />
+            <path d="M12 20v2" />
+            <path d="m4.93 4.93 1.41 1.41" />
+            <path d="m17.66 17.66 1.41 1.41" />
+            <path d="M2 12h2" />
+            <path d="M20 12h2" />
+            <path d="m6.34 17.66-1.41 1.41" />
+            <path d="m19.07 4.93-1.41 1.41" />
+          </svg>
+        </span>
+      </button>
+      <button class="color-toggle" id="colorToggle" type="button" aria-label="Choose accent colors" title="Choose accent colors">
+        <svg class="color-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+          <circle cx="6" cy="6" r="3"/>
+          <circle cx="18" cy="6" r="3"/>
+          <circle cx="6" cy="18" r="3"/>
+          <circle cx="18" cy="18" r="3"/>
+        </svg>
+      </button>
+      <div class="color-popover" id="colorPopover" role="dialog" aria-label="Accent colors">
+        <div class="color-grid">
+          <button class="color-swatch" data-primary="#10b981" data-secondary="#f59e0b" style="background:#10b981" aria-label="Emerald"></button>
+          <button class="color-swatch" data-primary="#f43f5e" data-secondary="#fb7185" style="background:#f43f5e" aria-label="Rose"></button>
+          <button class="color-swatch" data-primary="#8b5cf6" data-secondary="#a78bfa" style="background:#8b5cf6" aria-label="Violet"></button>
+          <button class="color-swatch" data-primary="#0ea5e9" data-secondary="#22d3ee" style="background:#0ea5e9" aria-label="Sky"></button>
+          <button class="color-swatch" data-primary="#f59e0b" data-secondary="#fbbf24" style="background:#f59e0b" aria-label="Amber"></button>
+          <button class="color-swatch" data-primary="#22c55e" data-secondary="#16a34a" style="background:#22c55e" aria-label="Green"></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero dotted-hero">
+    <div class="hero-bg dotted-glow" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <h1>Eat Right, Live Bright</h1>
+        <p class="lead">Empowering families with practical, local nutrition guidance through workshops, recipes, and
+          health education.</p>
+        <div class="cta-row">
+          <a href="foods.html" class="primary-cta">🥗 Explore Healthy Foods</a>
+          <a href="issues.html" class="ghost-cta">💊 Health Solutions</a>
+        </div>
+        <p class="hero-quote">“Local plates, brighter lives — one mindful meal at a time.”</p>
+      </div>
+      <div class="hero-illustration">
+        <img src="images/WhatsApp Image 2025-12-07 at 23.10.18_c27aeeb2.jpg"
+          alt="Field visit photo — community nutrition">
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <!-- ABOUT SECTION -->
+    <section class="section about">
+      <div class="container">
+        <h2>About Our Program</h2>
+        <p>Many families in rural areas lack awareness about balanced nutrition and dietary needs. Poor eating habits
+          lead to anemia, weakness, malnutrition, and preventable diseases.</p>
+        <p><strong>Our Mission:</strong> Educate communities on healthy, affordable nutrition using local ingredients.
+          We conduct hands-on workshops, cooking demonstrations, and provide personalized health counseling.</p>
+        <p class="muted">Navigate through our site to discover nutritious foods and find tailored advice for your health
+          concerns.</p>
+      </div>
+    </section>
+
+    <!-- MAIN THEMES SECTION -->
+    <section class="section highlights">
+      <div class="container">
+        <h2>What We Offer</h2>
+        <div class="quick-grid">
+          <div class="food-card">
+            <img src="images/icon-food.svg" alt="Food" class="small-icon">
+            <h4>Local, Nutritious Meals</h4>
+            <p>Learn to cook healthy, affordable meals using locally-available ingredients rich in essential nutrients.
+            </p>
+          </div>
+          <div class="food-card">
+            <img src="images/icon-people.svg" alt="Community" class="small-icon">
+            <h4>Interactive Workshops</h4>
+            <p>Hands-on cooking demonstrations and family sessions where we teach simple, traditional healthy recipes.
+            </p>
+          </div>
+          <div class="food-card">
+            <img src="images/icon-health.svg" alt="Health" class="small-icon">
+            <h4>Health Prevention & Care</h4>
+            <p>Practical guidance to prevent and manage anemia, malnutrition, diabetes, high blood pressure, and more.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION SECTION -->
+    <section class="section"
+      style="background: linear-gradient(135deg, var(--primary-light), #fffbf0); padding: 4rem 1.5rem;">
+      <div class="container" style="text-align: center;">
+        <h2>Ready to Transform Your Health?</h2>
+        <p>Discover foods that heal, recipes that nourish, and knowledge that empowers.</p>
+        <a href="campaign.html" class="primary-cta" style="display: inline-block; margin-top: 1rem;">
+          View Our Community Campaign →
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer footbar">
+    <div class="footer-inner">
+      <p class="footer-left">© 2025 Eat Right Live Bright Project</p>
+      <p class="footer-right">Community Service Internship Program | Nagullanka, Andhra Pradesh
+        <span class="author-credit">Developed by <strong>hariprasadchinimilli</strong>
+          <a class="linkedin-link" href="https://www.linkedin.com/in/haripch/" target="_blank" rel="noopener noreferrer" aria-label="Hariprasad Chinimilli on LinkedIn">
+            <svg class="linkedin-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="4" fill="currentColor"></rect>
+              <path d="M7 17h2V10H7v7zm1-8c.7 0 1.2-.5 1.2-1.2 0-.7-.5-1.3-1.2-1.3-.7 0-1.2.6-1.2 1.3 0 .7.5 1.2 1.2 1.2zm4 8h2v-3.8c0-.9.6-1.5 1.4-1.5.8 0 1.1.6 1.1 1.5V17h2v-4.1c0-2-1.1-3-2.6-3-1.2 0-1.8.7-2.1 1.2V10h-2v7z" fill="#ffffff"></path>
+            </svg>
+          </a>
+        </span>
+      </p>
+    </div>
+  </footer>
+
+  <script src="app.js?v=6" defer></script>
+</body>
+
+</html>

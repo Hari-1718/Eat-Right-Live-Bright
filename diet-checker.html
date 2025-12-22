@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Eat Right, Live Bright — Diet Checker</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=15">
+  <script src="app.js?v=4" defer></script>
+  <!-- Removed custom style block to use only global styles.css for layout and navbar -->
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+</head>
+
+<body>
+  <!-- HEADER / NAVIGATION -->
+  <header class="top-nav">
+    <div class="nav-wrap">
+      <a href="index.html" class="brand">
+        <img src="images/logo.svg" alt="Logo" class="logo-img">
+        <div class="brand-text">
+          <div class="brand-title">Eat Right, Live Bright</div>
+          <div class="brand-sub">Diet Checker</div>
+        </div>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+      <nav class="nav-actions">
+        <div class="sheet-handle"></div>
+        <button class="nav-close-btn" aria-label="Close menu">&times;</button>
+        <div class="nav-links-container">
+          <a href="index.html">Home</a>
+          <a href="foods.html">Healthy Foods</a>
+          <a href="issues.html">Health Issues</a>
+          <a href="campaign.html">Campaign</a>
+          <a href="diet-checker.html" aria-current="page">Diet Checker</a>
+        </div>
+      </nav>
+
+      <!-- Theme toggle moved -->
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme"
+        title="Toggle dark/light mode">
+        <span class="theme-icon">
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+          </svg>
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4" />
+            <path d="M12 2v2" />
+            <path d="M12 20v2" />
+            <path d="m4.93 4.93 1.41 1.41" />
+            <path d="m17.66 17.66 1.41 1.41" />
+            <path d="M2 12h2" />
+            <path d="M20 12h2" />
+            <path d="m6.34 17.66-1.41 1.41" />
+            <path d="m19.07 4.93-1.41 1.41" />
+          </svg>
+        </span>
+      </button>
+      <button class="color-toggle" id="colorToggle" type="button" aria-label="Choose accent colors" title="Choose accent colors">
+        <svg class="color-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+          <circle cx="6" cy="6" r="3"/>
+          <circle cx="18" cy="6" r="3"/>
+          <circle cx="6" cy="18" r="3"/>
+          <circle cx="18" cy="18" r="3"/>
+        </svg>
+      </button>
+      <div class="color-popover" id="colorPopover" role="dialog" aria-label="Accent colors">
+        <div class="color-grid">
+          <button class="color-swatch" data-primary="#10b981" data-secondary="#f59e0b" style="background:#10b981" aria-label="Emerald"></button>
+          <button class="color-swatch" data-primary="#f43f5e" data-secondary="#fb7185" style="background:#f43f5e" aria-label="Rose"></button>
+          <button class="color-swatch" data-primary="#8b5cf6" data-secondary="#a78bfa" style="background:#8b5cf6" aria-label="Violet"></button>
+          <button class="color-swatch" data-primary="#0ea5e9" data-secondary="#22d3ee" style="background:#0ea5e9" aria-label="Sky"></button>
+          <button class="color-swatch" data-primary="#f59e0b" data-secondary="#fbbf24" style="background:#f59e0b" aria-label="Amber"></button>
+          <button class="color-swatch" data-primary="#22c55e" data-secondary="#16a34a" style="background:#22c55e" aria-label="Green"></button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="wrap">
+    <div class="top">
+      <div class="hero card">
+        <h1>Eat Right, Live Bright</h1>
+        <p>Simple diet checker based on your age, height and weight</p>
+      </div>
+    </div>
+
+    <div class="grid">
+      <form id="form" class="card" novalidate
+        style="background: linear-gradient(135deg, #e0ffe0 0%, #fffbe6 100%); box-shadow: 0 4px 24px rgba(16,24,40,0.10); border-radius: 18px; padding: 2.2rem 1.5rem;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:1.2rem;">
+          <img src="images/icon-health.svg" alt="Diet Checker" style="width:38px;height:38px;">
+          <h2 style="margin:0;font-size:2rem;color:#16a34a;font-weight:700;letter-spacing:-1px;">Diet Checker</h2>
+        </div>
+        <p class="muted" style="font-size:1.08rem;margin-bottom:1.2rem;">Enter details to get a <span
+            style="color:#f97316;font-weight:600">vegetarian-friendly</span> diet recommendation.</p>
+
+        <div class="field" style="margin-bottom:1.1rem;">
+          <label for="name" style="font-weight:600;display:flex;align-items:center;gap:8px;"><span>👤</span>
+            Name</label>
+          <input id="name" type="text" placeholder="Your name" style="font-size:1.05rem;">
+          <div id="err-name" class="error" aria-live="polite"></div>
+        </div>
+
+        <div class="row" style="margin-bottom:1.1rem;">
+          <div class="col field">
+            <label for="age" style="font-weight:600;display:flex;align-items:center;gap:8px;"><span>🎂</span> Age
+              (years)</label>
+            <input id="age" type="number" min="0" step="1" placeholder="e.g. 30" style="font-size:1.05rem;">
+            <div id="err-age" class="error" aria-live="polite"></div>
+          </div>
+          <div class="col field">
+            <label for="gender" style="font-weight:600;display:flex;align-items:center;gap:8px;"><span>⚧️</span>
+              Gender</label>
+            <select id="gender" style="font-size:1.05rem;">
+              <option value="">Select</option>
+              <option>Male</option>
+              <option>Female</option>
+            </select>
+            <div id="err-gender" class="error" aria-live="polite"></div>
+          </div>
+        </div>
+
+        <div class="row" style="margin-bottom:1.1rem;">
+          <div class="col field">
+            <label for="height" style="font-weight:600;display:flex;align-items:center;gap:8px;"><span>📏</span> Height
+              (cm)</label>
+            <input id="height" type="number" min="0" step="0.1" placeholder="e.g. 170" style="font-size:1.05rem;">
+            <div id="err-height" class="error" aria-live="polite"></div>
+          </div>
+          <div class="col field">
+            <label for="weight" style="font-weight:600;display:flex;align-items:center;gap:8px;"><span>⚖️</span> Weight
+              (kg)</label>
+            <input id="weight" type="number" min="0" step="0.1" placeholder="e.g. 65" style="font-size:1.05rem;">
+            <div id="err-weight" class="error" aria-live="polite"></div>
+          </div>
+        </div>
+
+        <div class="field" style="margin-bottom:1.1rem;">
+          <label for="activity" style="font-weight:600;display:flex;align-items:center;gap:8px;"><span>🏃‍♂️</span>
+            Activity level</label>
+          <select id="activity" style="font-size:1.05rem;">
+            <option value="">Select</option>
+            <option>Sedentary</option>
+            <option>Light</option>
+            <option>Moderate</option>
+            <option>Heavy</option>
+          </select>
+          <div id="err-activity" class="error" aria-live="polite"></div>
+        </div>
+
+        <div class="actions" style="margin-top:1.5rem;gap:16px;">
+          <button class="btn" type="submit"
+            style="font-size:1.08rem;padding:12px 22px;box-shadow:0 2px 8px rgba(16,24,40,0.10);font-weight:700;">Check
+            My Diet</button>
+          <button type="button" id="clear" class="btn secondary"
+            style="font-size:1.08rem;padding:12px 22px;">Clear</button>
+          <div style="margin-left:auto" class="muted">Results appear on the right (or below on mobile).</div>
+        </div>
+      </form>
+
+      <section class="card" id="resultArea" aria-live="polite">
+        <h2 style="margin-top:0">Your Results</h2>
+        <div id="empty" class="muted">No results yet — fill the form and click <strong>Check My Diet</strong>.</div>
+
+        <div id="result" style="display:none">
+          <div style="display:flex;justify-content:space-between;align-items:start">
+            <div>
+              <h3 style="margin:.2rem 0">Hi <span id="rName"></span> 👋</h3>
+              <p id="summary" class="muted" style="margin:4px 0 0 0"></p>
+            </div>
+            <div><span id="rTag" class="tag">--</span></div>
+          </div>
+
+          <div class="stats">
+            <div class="stat">
+              <div style="font-size:0.8rem;color:var(--muted)">BMI</div><b id="rBMI">--</b>
+            </div>
+            <div class="stat">
+              <div style="font-size:0.8rem;color:var(--muted)">Classification</div><b id="rClass">--</b>
+            </div>
+            <div class="stat">
+              <div style="font-size:0.8rem;color:var(--muted)">Activity</div><b id="rActivity">--</b>
+            </div>
+          </div>
+
+          <div style="margin-top:12px">
+            <div style="font-weight:700">Detected issue</div>
+            <div style="margin-top:6px"><span id="rIssue" class="tag">--</span></div>
+          </div>
+
+          <div style="margin-top:12px">
+            <div style="font-weight:700">Recommended foods (vegetarian-friendly)</div>
+            <ul id="rFoods" class="recommend"></ul>
+          </div>
+
+          <div id="rNote"></div>
+
+          <div class="tips">
+            <div style="font-weight:700">General Tips</div>
+            <ul>
+              <li>Drink 6–8 glasses of water daily.</li>
+              <li>Include seasonal fruits and vegetables regularly.</li>
+              <li>Avoid packaged junk food and sugary drinks.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    // calculateBMI(heightCm, weightKg)
+    function calculateBMI(heightCm, weightKg) {
+      const h = Number(heightCm) / 100;
+      if (!h || h <= 0) return NaN;
+      return Number(weightKg) / (h * h);
+    }
+
+    // classifyBMI(bmi)
+    function classifyBMI(bmi) {
+      if (isNaN(bmi)) return 'Unknown';
+      if (bmi < 18.5) return 'Underweight';
+      if (bmi >= 18.5 && bmi <= 24.9) return 'Normal';
+      if (bmi >= 25 && bmi <= 29.9) return 'Overweight';
+      return 'Obese';
+    }
+
+    // detectIssue(age, bmi)
+    function detectIssue(age, bmi) {
+      age = Number(age);
+      if (age < 18 && bmi < 18.5) return 'Risk of malnutrition';
+      if (age >= 18 && bmi < 18.5) return 'Underweight / possible anemia';
+      if (bmi >= 18.5 && bmi <= 24.9) return 'Healthy weight';
+      if (bmi >= 25 && bmi <= 29.9) return 'Overweight';
+      if (bmi >= 30) return 'Obesity / high BP risk';
+      return 'General';
+    }
+
+    // getFoodRecommendations(issue)
+    function getFoodRecommendations(issue) {
+      const map = {
+        'Underweight / possible anemia': ['Spinach', 'Beetroot', 'Ragi', 'Dates', 'Eggs', 'Groundnuts', 'Green gram', 'Banana', 'Milk', 'Sprouts', 'Ragi malt'],
+        'Risk of malnutrition': ['Spinach', 'Beetroot', 'Ragi', 'Dates', 'Eggs', 'Groundnuts', 'Green gram', 'Banana', 'Milk', 'Sprouts', 'Ragi malt'],
+        'Healthy weight': ['Mixed vegetables', 'Fruits', 'Whole grains', 'Sprouts', 'Curd', 'Nuts (moderate)'],
+        'Overweight': ['More vegetables & fruits', 'Salads', 'Ragi', 'Jowar roti', 'Sprouts', 'Buttermilk', 'Avoid deep-fried snacks and sugary drinks'],
+        'Obesity / high BP risk': ['Oats', 'Vegetables', 'Fruits', 'Salads', 'Low-salt foods (avoid papads, pickles, chips)', 'Banana (moderation)', 'Coconut water', 'Beetroot', 'Garlic', 'Ragi'],
+        'General': ['Vegetables', 'Fruits', 'Whole grains', 'Legumes']
+      };
+      return map[issue] || map['General'];
+    }
+
+    // Validation helpers
+    function clearErrors() { ['name', 'age', 'gender', 'height', 'weight', 'activity'].forEach(id => { const el = document.getElementById('err-' + id); if (el) el.textContent = ''; }); }
+    function validate(values) { clearErrors(); let ok = true; if (!values.name || !values.name.trim()) { document.getElementById('err-name').textContent = 'Please enter name'; ok = false; } if (values.age === '' || isNaN(values.age)) { document.getElementById('err-age').textContent = 'Please enter age'; ok = false; } else if (values.age < 0) { document.getElementById('err-age').textContent = 'Age must be positive'; ok = false; } if (!values.gender) { document.getElementById('err-gender').textContent = 'Select gender'; ok = false; } if (values.height === '' || isNaN(values.height) || values.height <= 0) { document.getElementById('err-height').textContent = 'Enter valid height'; ok = false; } if (values.weight === '' || isNaN(values.weight) || values.weight <= 0) { document.getElementById('err-weight').textContent = 'Enter valid weight'; ok = false; } if (!values.activity) { document.getElementById('err-activity').textContent = 'Select activity'; ok = false; } return ok; }
+
+    // Form handling
+    const form = document.getElementById('form');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const values = {
+        name: document.getElementById('name').value.trim(),
+        age: Number(document.getElementById('age').value),
+        gender: document.getElementById('gender').value,
+        height: Number(document.getElementById('height').value),
+        weight: Number(document.getElementById('weight').value),
+        activity: document.getElementById('activity').value
+      };
+      if (!validate(values)) return;
+
+      const bmi = calculateBMI(values.height, values.weight);
+      const bmiRounded = Number.isFinite(bmi) ? Math.round(bmi * 100) / 100 : NaN;
+      const cls = classifyBMI(bmi);
+      const issue = detectIssue(values.age, bmi);
+      const foods = getFoodRecommendations(issue);
+
+      // Extra hints
+      const hints = [];
+      if (bmi < 18.5 && values.age < 25) hints.push('Check for anemia, low appetite.');
+      if (bmi >= 25 && values.age > 35) hints.push('Risk for diabetes & BP – consult doctor.');
+
+      // Populate UI
+      document.getElementById('empty').style.display = 'none';
+      document.getElementById('result').style.display = 'block';
+      document.getElementById('rName').textContent = values.name || 'Friend';
+      document.getElementById('summary').textContent = `You are ${values.age} years old with BMI ${Number.isFinite(bmiRounded) ? bmiRounded.toFixed(2) : '--'} which falls in the ${cls} range.`;
+      document.getElementById('rBMI').textContent = Number.isFinite(bmiRounded) ? bmiRounded.toFixed(2) : '--';
+      document.getElementById('rClass').textContent = cls;
+      document.getElementById('rActivity').textContent = values.activity;
+      document.getElementById('rTag').textContent = cls;
+      document.getElementById('rIssue').textContent = issue;
+      const ul = document.getElementById('rFoods'); ul.innerHTML = ''; foods.forEach(f => { const li = document.createElement('li'); li.textContent = f; ul.appendChild(li); });
+      const note = document.getElementById('rNote'); note.innerHTML = ''; if (hints.length) { const d = document.createElement('div'); d.className = 'note'; d.textContent = hints.join(' '); note.appendChild(d); }
+      // scroll into view on small screens
+      document.getElementById('resultArea').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    document.getElementById('clear').addEventListener('click', () => {
+      form.reset(); clearErrors(); document.getElementById('empty').style.display = 'block'; document.getElementById('result').style.display = 'none'; document.getElementById('rFoods').innerHTML = ''; document.getElementById('rNote').innerHTML = '';
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Health Issues & Solutions - Foods to prevent and manage common ailments">
+  <title>Health Issues & Solutions — Eat Right, Live Bright</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;700&family=Segoe+UI:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=15">
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+</head>
+
+<body>
+  <!-- HEADER / NAVIGATION -->
+  <header class="top-nav">
+    <div class="nav-wrap">
+      <a href="index.html" class="brand">
+        <img src="images/logo.svg" alt="Logo" class="logo-img">
+        <div class="brand-text">
+          <div class="brand-title">Eat Right, Live Bright</div>
+          <div class="brand-sub">Health Solutions</div>
+        </div>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+      <nav class="nav-actions">
+        <div class="sheet-handle"></div>
+        <button class="nav-close-btn" aria-label="Close menu">&times;</button>
+        <div class="nav-links-container">
+          <a href="index.html">Home</a>
+          <a href="foods.html">Healthy Foods</a>
+          <a href="issues.html" aria-current="page">Health Issues</a>
+          <a href="campaign.html">Campaign</a>
+          <a href="diet-checker.html">Diet Checker</a>
+        </div>
+      </nav>
+
+      <!-- Theme toggle moved -->
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme"
+        title="Toggle dark/light mode">
+        <span class="theme-icon">
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+          </svg>
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4" />
+            <path d="M12 2v2" />
+            <path d="M12 20v2" />
+            <path d="m4.93 4.93 1.41 1.41" />
+            <path d="m17.66 17.66 1.41 1.41" />
+            <path d="M2 12h2" />
+            <path d="M20 12h2" />
+            <path d="m6.34 17.66-1.41 1.41" />
+            <path d="m19.07 4.93-1.41 1.41" />
+          </svg>
+        </span>
+      </button>
+      <button class="color-toggle" id="colorToggle" type="button" aria-label="Choose accent colors" title="Choose accent colors">
+        <svg class="color-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+          <circle cx="6" cy="6" r="3"/>
+          <circle cx="18" cy="6" r="3"/>
+          <circle cx="6" cy="18" r="3"/>
+          <circle cx="18" cy="18" r="3"/>
+        </svg>
+      </button>
+      <div class="color-popover" id="colorPopover" role="dialog" aria-label="Accent colors">
+        <div class="color-grid">
+          <button class="color-swatch" data-primary="#10b981" data-secondary="#f59e0b" style="background:#10b981" aria-label="Emerald"></button>
+          <button class="color-swatch" data-primary="#f43f5e" data-secondary="#fb7185" style="background:#f43f5e" aria-label="Rose"></button>
+          <button class="color-swatch" data-primary="#8b5cf6" data-secondary="#a78bfa" style="background:#8b5cf6" aria-label="Violet"></button>
+          <button class="color-swatch" data-primary="#0ea5e9" data-secondary="#22d3ee" style="background:#0ea5e9" aria-label="Sky"></button>
+          <button class="color-swatch" data-primary="#f59e0b" data-secondary="#fbbf24" style="background:#f59e0b" aria-label="Amber"></button>
+          <button class="color-swatch" data-primary="#22c55e" data-secondary="#16a34a" style="background:#22c55e" aria-label="Green"></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1>Health Issues & Natural Solutions</h1>
+        <p style="font-size: 1.05rem; color: var(--gray-medium); margin-bottom: 2rem;">Find foods and nutrition guidance
+          tailored to your health concerns. Click each card to learn which foods help prevent and manage common
+          ailments. Nutritional values are shown in English.</p>
+
+        <div class="cards-grid">
+          <!-- 1. Anemia -->
+          <div class="card">
+            <h3>1. Anemia</h3>
+            <ul class="foods">
+              <li>Spinach — Iron 2.7 mg/100g; Folate 141 mcg</li>
+              <li>Beetroot — Folate 109 mcg/100g</li>
+              <li>Ragi — Iron 3.9 mg/100g; Calcium 344 mg</li>
+              <li>Dates — Iron 0.9 mg; Energy 277 kcal</li>
+              <li>Eggs — Iron 1.2 mg; Protein 6 g</li>
+              <li>Groundnuts — Protein 26 g/100g; Zinc 8 mg</li>
+              <li>Green gram — Iron 6.7 mg/100g; Protein 24 g</li>
+            </ul>
+          </div>
+
+          <!-- 2. Weakness -->
+          <div class="card">
+            <h3>2. Weakness / Nutritional Deficiency</h3>
+            <ul class="foods">
+              <li>Banana — Energy 89 kcal/100g; Potassium 358 mg</li>
+              <li>Eggs — Protein 6 g</li>
+              <li>Milk — Calcium 120 mg; Protein 8 g</li>
+              <li>Sprouts — Protein 14 g/100g</li>
+              <li>Ragi malt — Calcium 344 mg/100g</li>
+              <li>Groundnuts — Healthy fats 49 g/100g</li>
+            </ul>
+          </div>
+
+          <!-- 3. Diarrhea -->
+          <div class="card">
+            <h3>3. Diarrhea</h3>
+            <ul class="foods">
+              <li>ORS (Oral Rehydration Solution) — Sodium 75 mEq; Glucose 13.5 g</li>
+              <li>Coconut water — Potassium 250 mg/100ml</li>
+              <li>Curd rice — Probiotics; Carbs 18 g/100g</li>
+              <li>Banana — Pectin fiber 2.6 g/100g</li>
+              <li>Boiled potatoes — Carbs 17 g/100g</li>
+            </ul>
+          </div>
+
+          <!-- 4. Constipation -->
+          <div class="card">
+            <h3>4. Constipation</h3>
+            <ul class="foods">
+              <li>Papaya — Fiber 2.2 g/100g; Papain enzyme</li>
+              <li>Guava — Fiber 5.4 g/100g; Vitamin C 228 mg</li>
+              <li>Whole grains — Fiber 7–10 g/100g</li>
+              <li>Soaked raisins — Fiber 3.7 g/100g</li>
+              <li>Flax seeds — Fiber 27 g/100g; Omega-3 22 g</li>
+            </ul>
+          </div>
+
+          <!-- 5. Acidity -->
+          <div class="card">
+            <h3>5. Acidity / Gastric Issues</h3>
+            <ul class="foods">
+              <li>Buttermilk — Probiotics; Calcium 120 mg/100ml</li>
+              <li>Banana — Natural antacid; Potassium 358 mg</li>
+              <li>Coconut water — Electrolytes</li>
+              <li>Oats — Soluble fiber 4 g/100g</li>
+              <li>Cucumber — Water 95%</li>
+            </ul>
+          </div>
+
+          <!-- 6. Diabetes -->
+          <div class="card">
+            <h3>6. Diabetes</h3>
+            <ul class="foods">
+              <li>Ragi — Low GI; Fiber 3.6 g/100g</li>
+              <li>Jowar roti — Fiber 6 g/100g</li>
+              <li>Bitter gourd — Charantin compounds</li>
+              <li>Sprouts — Protein 14 g/100g</li>
+              <li>Nuts — Healthy fats 50 g/100g</li>
+              <li>Guava — Low sugar; Fiber 5 g/100g</li>
+            </ul>
+          </div>
+
+          <!-- 7. High Blood Pressure -->
+          <div class="card">
+            <h3>7. High Blood Pressure</h3>
+            <ul class="foods">
+              <li>Banana — Potassium 358 mg</li>
+              <li>Coconut water — Potassium 250 mg/100ml</li>
+              <li>Beetroot — Nitrates 250 mg/100g</li>
+              <li>Garlic — Allicin</li>
+              <li>Ragi — Magnesium 137 mg/100g</li>
+            </ul>
+          </div>
+
+          <!-- 8. Dengue / Viral Fever -->
+          <div class="card">
+            <h3>8. Dengue / Viral Fever</h3>
+            <ul class="foods">
+              <li>Pomegranate — Iron 0.3 mg; Vitamin C 10 mg</li>
+              <li>Orange / Sweet lime — Vitamin C 53 mg/100g</li>
+              <li>Coconut water — Electrolytes</li>
+              <li>Papaya leaf — Platelet-supportive enzymes</li>
+              <li>Idli / Khichdi — Easily digestible carbs</li>
+            </ul>
+          </div>
+
+          <!-- 9. Joint Pain / Arthritis -->
+          <div class="card">
+            <h3>9. Joint Pain / Arthritis</h3>
+            <ul class="foods">
+              <li>Turmeric milk — Curcumin (anti-inflammatory)</li>
+              <li>Sesame seeds — Calcium 975 mg/100g</li>
+              <li>Ragi — Calcium 344 mg/100g</li>
+              <li>Fish — Omega-3 fats 1.8 g/100g</li>
+              <li>Leafy greens — Vitamin K 180 mcg/100g</li>
+            </ul>
+          </div>
+
+          <!-- 10. Respiratory Issues -->
+          <div class="card">
+            <h3>10. Respiratory Issues (Cough / Cold / Asthma)</h3>
+            <ul class="foods">
+              <li>Warm water — Hydration & soothing</li>
+              <li>Ginger — Gingerol (anti-inflammatory)</li>
+              <li>Tulsi leaves — Eugenol</li>
+              <li>Citrus fruits — Vitamin C 50–60 mg/100g</li>
+              <li>Honey — Antioxidants</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer footbar">
+    <div class="footer-inner">
+      <p class="footer-left">© 2025 Eat Right Live Bright Project</p>
+      <p class="footer-right">Natural Foods for Health & Wellness</p>
+    </div>
+  </footer>
+
+  <script src="app.js?v=4" defer></script>
+</body>
+
+</html>
